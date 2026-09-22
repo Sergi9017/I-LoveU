@@ -26,7 +26,7 @@ body {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: white;
     position: absolute;
-    top: 30%;
+    top: 28%;
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 0;
@@ -36,22 +36,9 @@ body {
     text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-    #lyrics {
-        font-size: 14px;
-        top: 22%;
-        letter-spacing: 3px;
-    }
-    .flowers {
-        font-size: 14px;
-        transform: scale(0.9) translateY(20vmin);
-    }
-}
-
-
 .titulo {
     margin-bottom: 180px;
-    font-family: 'Poppins', cursive;
+    font-family: 'Poppins',cursive;
     color: yellow;
     position: absolute;
     top: 6%;
@@ -120,16 +107,7 @@ body {
 
 .flowers {
     position: relative;
-    transform: scale(0.75) translateY(20vmin);
-}
-
-@media only screen and (max-width: 600px) {
-    .flowers {
-        font-size: 14px;
-        margin-bottom: 35%;
-        letter-spacing: 3px;
-        transform: scale(1.0) translateY(8vmin);
-    }
+    transform: scale(0.75) translateY(28vmin);
 }
 
 .flower {
@@ -251,7 +229,6 @@ body {
     width: 8vmin;
     height: 8vmin;
     background-color: #f9fd25;
-    /* background-color: #fd2525; */
     filter: blur(10vmin);
 }
 .flower__leaf {
@@ -1618,54 +1595,23 @@ body {
 .container * {
     -webkit-animation-play-state: paused !important;
     animation-play-state: paused !important;
-} /*# sourceMappingURL=main.css.map */
-
-
-/* Reset de estilos básicos */
-body, h1, p {
-    margin: 0;
-    padding: 0;
 }
 
-/* Estilos generales */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-}
+@media only screen and (max-width: 600px) {
+    #lyrics {
+        font-size: 14px;
+        top: 52%;
+        letter-spacing: 3px;
+    }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
+    .titulo {
+        font-size: 1.6rem;
+        letter-spacing: 4px;
+        top: 4%;
+    }
 
-h1 {
-    font-size: 2em;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-/* Media Queries para tamaños de pantalla diferentes */
-@media screen and (max-width: 600px) {
-    /* Estilos para pantallas pequeñas */
-    h1 {
-        font-size: 1.5em;
+    .flowers {
+        font-size: 14px;
+        transform: scale(0.9) translateY(22vmin);
     }
 }
-
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-    /* Estilos para pantallas medianas */
-    h1 {
-        font-size: 1.8em;
-    }
-}
-
-@media screen and (min-width: 1025px) {
-    /* Estilos para pantallas grandes */
-    h1 {
-        font-size: 2em;
-    }
-}
-
-/* Agregar más estilos según sea necesario */
