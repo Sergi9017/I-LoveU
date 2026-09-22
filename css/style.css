@@ -5,13 +5,16 @@
 body{
     color: azure;
     width: 100%;
-    height: 82vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: black;
-    /* padding-top: -30; */
+    background-color: #041e42;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
 }
 
 .botones{
@@ -19,26 +22,30 @@ body{
     border-radius: 80px;
     background-color: transparent;
     border: none;
+    position: relative;
+    z-index: 2;
 }
 
 .botones a{
-    background-color: #0a2be9;
+    background-color: #b3122e;
     padding: 9px;
     border-radius: 80px;
     -webkit-border-radius: 80px;
     -moz-border-radius: 80px;
     -ms-border-radius: 80px;
     -o-border-radius: 80px;
-
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
 }
 
 .botones a:focus{
-    background-color: rgb(50, 194, 194);
+    background-color: #e63946;
 }
 
 .greetings{
     font-size: 7rem;
     font-weight: 900;
+    position: relative;
+    z-index: 2;
 }
 .greetings > span{
     animation: glow 2.5s ease-in-out infinite;
@@ -46,7 +53,7 @@ body{
 @keyframes glow{
     0%, 100%{
         color: #fff;
-        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+        text-shadow: 0 0 12px #e63946, 0 0 50px #e63946, 0 0 100px #e63946;
     }
     10%, 90%{
         color: #111;
@@ -72,12 +79,64 @@ body{
 .description{
     font-size: 1.5rem;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .button a{
     text-decoration: none;
     font-size: 1rem;
-    color: #111;
+    color: #fff;
+}
+
+/* CORAZONES CAYENDO */
+.corazon {
+    position: absolute;
+    top: -20px;
+    width: 16px;
+    height: 16px;
+    background: #e63946;
+    transform: rotate(45deg);
+    opacity: 0;
+    animation: caer 12s linear infinite;
+    z-index: 0;
+}
+
+.corazon::before,
+.corazon::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #e63946;
+    border-radius: 50%;
+}
+
+.corazon::before {
+    top: -8px;
+    left: 0;
+}
+
+.corazon::after {
+    left: -8px;
+    top: 0;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(-20px) rotate(45deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.9;
+    }
+    90% {
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(110vh) rotate(405deg);
+        opacity: 0;
+    }
 }
 
 @media screen and (max-width:574px){
