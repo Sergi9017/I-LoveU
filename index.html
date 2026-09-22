@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/flowers.png" type="image/x-icon">
+    <title>Para ti mi noviecita bonita</title>
+</head>
+
+<body>
+<div class="greetings">
+    <span>A</span>
+    <span>M</span>
+    <span>O</span>
+    <span>R</span>
+    <span>!</span>
+</div>
+<div class="description">
+    <span>Un pequeño detalle para ti, espero te guste c: </span>
+</div>
+<div class="button">
+    <button class="botones">
+        <a href="flower.html" style="color: #fff;">CLICK AQUÍ</a>
+    </button>
+</div>
+
+<div id="corazones"></div>
+
+<script>
+    const contenedor = document.getElementById('corazones');
+    const totalCorazones = 25;
+
+    for (let i = 0; i < totalCorazones; i++) {
+        const corazon = document.createElement('div');
+        corazon.className = 'corazon';
+        corazon.style.left = Math.random() * 100 + '%';
+        corazon.style.animationDelay = Math.random() * 10 + 's';
+        corazon.style.animationDuration = (10 + Math.random() * 6) + 's';
+        contenedor.appendChild(corazon);
+    }
+</script>
+
+</body>
+
+</html>
